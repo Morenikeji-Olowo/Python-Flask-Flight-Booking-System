@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Selection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='seats.css') }}">
+</head>
+<body class="seat-page">
+    <div class="form-container">
+        <h2>Select your seat</h2>
+
+        <div class="summary">
+            <p><strong>From:</strong> {{ from_city }}</p>
+            <p><strong>To:</strong> {{ to_city }}</p>
+            <p><strong>Date:</strong> {{ date }}</p>
+            <p><strong>Price:</strong> ${{ price }}</p>
+        </div>
+
+        <form action="{{ url_for('confirm') }}" method="POST">
+            <label for="seat">Choose a seat:</label>
+            <select name="seat" id="seat" required>
+              <option value="">--Select Seat--</option>
+              <option value="1A">1A</option>
+              <option value="1B">1B</option>
+              <option value="2A">2A</option>
+              <option value="2B">2B</option>
+            </select>
+
+            <input type="hidden" name="from_city" value="{{ from_city }}">
+            <input type="hidden" name="to_city" value="{{ to_city }}">
+            <input type="hidden" name="date" value="{{ date }}">
+            <input type="hidden" name="price" value="{{ price }}">
+      
+            <button type="submit" class="book-btn">Confirm Booking</button>
+            
+        </form>
+    </div>
+    
+</body>
+</html>

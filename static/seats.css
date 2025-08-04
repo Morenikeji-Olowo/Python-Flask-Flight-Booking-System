@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body.seat-page {
+    background: linear-gradient(to right, #a83232, #ffffff);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .form-container {
+    background: #ffffff;
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .summary {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-left: 5px solid #5f1515; /* your primary color */
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .summary p {
+    margin: 0.5rem 0;
+    font-size: 16px;
+    color: #444;
+  }
+  
+  label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  select {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+  }
+  
+  .book-btn {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #5f1515; /* primary color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .book-btn:hover {
+    background-color: #5f1515;
+  }
+  

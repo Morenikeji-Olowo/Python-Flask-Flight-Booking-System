@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ dest.name }} - Details</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='details.css') }}">
+</head>
+<body>
+  <section class="destination-detail">
+    <button onclick="window.history.back()" class="back-btn">Back</button>
+    <div class="detail-container">
+      <div class="image-section">
+        <img src="{{ url_for('static', filename=dest.image) }}" alt="{{ dest.name }}">
+      </div>
+      <div class="info-section">
+        <h2>{{ dest.name }}</h2>
+        <p>{{ dest.description }}</p>
+
+
+
+        <div class="reviews">
+          <h4>Reviews</h4>
+          <p><i>“Amazing place!”</i> - Alex</p>
+          <p><i>“Loved the vibe and energy.”</i> - Maria</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='payment.css') }}">
+</head>
+<body class="payment-page">
+  <button onclick="window.history.back()" class="back-btn">Back</button>
+  <div class="card">
+    <h1>Payment Information</h1>
+    <form action="{{ url_for('ticket') }}" method="POST">
+      <input type="hidden" name="from_city" value="{{ from_city }}">
+      <input type="hidden" name="to_city" value="{{ to_city }}">
+      <input type="hidden" name="date" value="{{ date }}">
+      <input type="hidden" name="seat" value="{{ seat }}">
+      <input type="hidden" name="price" value="{{ price }}">
+
+      <div class="input-group">
+        <label for="name">Cardholder Name</label>
+        <input type="text" id="name" name="name" placeholder="e.g., John Doe" required>
+      </div>
+
+      <div class="input-group">
+        <label for="card_number">Card Number</label>
+        <input type="text" id="card_number" name="card_number" placeholder="XXXX XXXX XXXX XXXX" required>
+      </div>
+
+      <div class="input-row">
+        <div class="input-group">
+          <label for="expiry">Expiry Date</label>
+          <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+        </div>
+
+        <div class="input-group">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" name="cvv" placeholder="123" required>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-pay">Pay ${{ price }}</button>
+    </form>
+  </div>
+</body>
+</html>

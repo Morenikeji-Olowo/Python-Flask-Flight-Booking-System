@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Ticket</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ticket.css') }}">
+</head>
+<body class="ticket-page">
+    <div class="ticket-container">
+        <h2>🎫 Boarding Pass</h2>
+        <div class="ticket">
+            <div class="ticket-details">
+                <div>
+                    <p><strong>From:</strong> {{ from_city }}</p>
+                    <p><strong>To:</strong> {{ to_city }}</p>
+                </div>
+                <div>
+                    <p><strong>Date:</strong> {{ date }}</p>
+                    <p><strong>Seat:</strong> {{ seat }}</p>
+                </div>
+                <div>
+                    <p><strong>Price:</strong> ${{ price }}</p>
+                </div>
+            </div>
+            <hr class="divider">
+            <p class="thanks">Thank you for booking with us!</p>
+        </div>
+        <a href="{{ url_for('home') }}" class="back-home">Back to Home</a>
+    </div>
+</body>
+</html>

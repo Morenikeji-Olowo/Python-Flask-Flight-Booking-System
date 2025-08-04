@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  .splash {
+    padding: 20px;
+    border-radius: 30px;
+    background: url('/static/images/splash.jpg') no-repeat center center/cover; 
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+  }
+  
+  .splash h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .splash p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .scroll-btn {
+    background-color: white;
+    color: #002244;
+    padding: 0.7rem 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .scroll-btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Destination section */
+  .destinations {
+    padding: 4rem 2rem;
+    background: #f5f5f5;
+    text-align: center;
+  }
+  
+  .booking-section,
+  .signup {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+
+
+.footer {
+    background-color: #5f1515; 
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .footer-links {
+    margin-top: 1rem;
+  }
+  
+  .footer-links a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+
+.destination-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10%;;
+    padding: 1rem 2rem;
+}
+.card{
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.card :hover{
+    transform: scale(1.03);
+}
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    height: 180px;
+    object-fit: cover;
+}
+.card h3 {
+    margin: 0.8rem 0 0.3rem;
+    color: #111111;
+}
+.book-btn {
+    display: inline-block;
+    margin-top: 0.7rem;
+    background: #5f1515;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+}
+.book-btn :hover{
+    background-color: #5f1515;
+}
+
+
+.booking-section{
+    padding: 60px 20px;
+    background-color: #f7f2f2;
+    text-align: center;
+}
+.booking-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #5f1515;
+}
+.booking-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    gap: 15px;
+}
+.booking-form input,
+.booking-form button {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.booking-form button {
+    background-color: #5f1515; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .booking-form button:hover {
+    background-color: #971e1e;
+  }
+
+
+.subscribe-section {
+    background-color: #f8f8f8; 
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .subscribe-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .subscribe-container h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .subscribe-form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .subscribe-form input {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 60%;
+    margin-right: 1rem;
+  }
+  
+  .subscribe-form button {
+    padding: 1rem 2rem;
+    background-color: #5f1515; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .subscribe-form button:hover {
+    background-color: #a32828; 
+  }
+
+
+
+  
+  
+  

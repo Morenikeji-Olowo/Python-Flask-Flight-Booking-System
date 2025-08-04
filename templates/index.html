@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flight Booker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Splash screen -->
+  <section class="splash">
+    <h1>Welcome to SkySwift</h1>
+    <p>Book your next adventure in seconds.</p>
+    <a href="#destinations" class="scroll-btn">Explore <i class="fas fa-arrow-down"></i></a>
+  </section>
+
+
+  <section id="destinations" class="destinations">
+    <h2>Popular Destinations</h2>
+    <div class="destination-list">
+      
+       <div class="card">
+        <img src="/static/images/paris.webp" alt="Paris">
+        <h3>Paris</h3>
+        <p>The city of lights and love.</p>
+        <a href="{{ url_for('destination_detail', name='paris') }}" class="book-btn">Explore</a>
+
+       </div>
+
+       <div class="card">
+        <img src="/static/images/tokyo.webp" alt="Tokyo">
+        <h3>Tokyo</h3>
+        <p>Experience the future and tradition</p>
+        <a href="{{ url_for('destination_detail', name='tokyo') }}" class="book-btn">Explore</a>
+
+       </div>
+
+       <div class="card">
+        <img src="/static/images/nairobi.png" alt="Nairobi">
+        <h3>Nairobi</h3>
+        <p>Explore the heart of Africa</p>
+        <a href="{{ url_for('destination_detail', name='nairobi') }}" class="book-btn">Explore</a>
+
+       </div>
+
+       <div class="card">
+        <img src="/static/images/germany.avif" alt="germany">
+        <h3>Germany</h3>
+        <p>Dive into acient History</p>
+        <a href="{{ url_for('destination_detail', name='germany') }}" class="book-btn">Explore</a>
+
+       </div>
+
+       <div class="card">
+        <img src="/static/images/new york.avif" alt="NYU">
+        <h3>New York City</h3>
+        <p>The city that never sleeps</p>
+        <a href="{{ url_for('destination_detail', name='new-york') }}" class="book-btn">Explore</a>
+
+       </div>
+
+       <div class="card">
+        <img src="/static/images/cape-town.jpg" alt="cape-town">
+        <h3>Cape Town</h3>
+        <p>Nature's drama and cultural color</p>
+        <a href="{{ url_for('destination_detail', name='cape-town') }}" class="book-btn">Explore</a>
+
+       </div>
+       
+       
+    </div>
+  </section>
+  <br>
+  <br>
+
+  <section id="booking" class="booking-section">
+    <h2>Plan Your Trip</h2>
+    <form action="{{ url_for('book') }}" method="POST" class="booking-form">
+        <label for="from_city">From:</label>
+        <input type="text" name="from_city" id="from_city" placeholder="Depature City" required>
+
+        <label for="to_city">To:</label>
+        <input type="text" name="to_city" id="to_city" placeholder="Destination City" required>
+
+        <label for="date">Travel Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <button type="submit" class="book-btn">Check Seats</button>
+    </form>
+  </section>
+
+
+<!-- Subscribe Section -->
+  <section class="subscribe-section">
+    <div class="subscribe-container">
+      <h3>Subscribe to our Newsletter</h3>
+      <form method="POST" class="subscribe-form">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit" class="subscribe-btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Travel Booking. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#about-us">About Us</a>
+        <a href="#terms">Terms & Conditions</a>
+        <a href="#privacy">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
